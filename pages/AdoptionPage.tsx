@@ -86,13 +86,6 @@ export default function AdoptionPage() {
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault()
 
-    const currentPet = pets.find((item) => item.id === Number(id))
-
-    if (!currentPet) {
-      setError('Không tìm thấy thú cưng.')
-      return
-    }
-
     const normalizedPhone = phone.replace(/[^\d+]/g, '')
 
     if (!/^(0|\+84)\d{9,10}$/.test(normalizedPhone)) {
@@ -109,8 +102,8 @@ export default function AdoptionPage() {
 
     const application: AdoptionApplication = {
       id: `${Date.now()}`,
-      petId: currentPet.id,
-      petName: currentPet.name,
+      petId: pet.id,
+      petName: pet.name,
       fullName: fullName.trim(),
       phone: normalizedPhone,
       email: email.trim(),
