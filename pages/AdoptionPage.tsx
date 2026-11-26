@@ -35,6 +35,8 @@ export default function AdoptionPage() {
       </main>
     )
   }
+  const petId = pet.id
+const petName = pet.name
 
   if (submitted) {
     return (
@@ -64,9 +66,9 @@ export default function AdoptionPage() {
       return
     }
     const application: AdoptionApplication = {
-      id: `${Date.now()}`,
-      petId: pet.id,
-      petName: pet.name,
+  id: `${Date.now()}`,
+  petId: petId,
+  petName: petName,
       fullName: fullName.trim(),
       phone: normalizedPhone,
       email: email.trim(),
