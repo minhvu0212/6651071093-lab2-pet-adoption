@@ -84,7 +84,14 @@ export default function AdoptionPage() {
   }
 
   function handleSubmit(event: FormEvent<HTMLFormElement>) {
-    event.preventDefault()
+  event.preventDefault()
+
+  const currentPet = pets.find((item) => item.id === Number(id))
+
+  if (!currentPet) {
+    setError('Không tìm thấy thú cưng.')
+    return
+  }
 
     if (!pet) {
       return
@@ -104,18 +111,17 @@ export default function AdoptionPage() {
       return
     }
 
-    const application: AdoptionApplication = {
-      id: `${Date.now()}`,
-      petId: pet.id,
-      petName: pet.name,
-      fullName: fullName.trim(),
-      phone: normalizedPhone,
-      email: email.trim(),
-      address: address.trim(),
-      reason: reason.trim(),
-      createdAt: new Date().toISOString()
-    }
-
+   const application: AdoptionApplication = {
+  id: `${Date.now()}`,
+  petId: currentPet.id,
+  petName: currentPet.name,
+  fullName: fullName.trim(),
+  phone: normalizedPhone,
+  email: email.trim(),
+  address: address.trim(),
+  reason: reason.trim(),
+  createdAt: new Date().toISOString()
+}
     try {
       const saved = localStorage.getItem(
         'mai-am-nho-adoption-applications'
