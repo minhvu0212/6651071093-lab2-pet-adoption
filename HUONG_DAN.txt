@@ -1,0 +1,30 @@
+MSSV: 6651071093
+De tai: Nhan nuoi thu cung (D=8)
+3 tinh nang: bieu do thong ke; loc theo khoang phi/ngay; animation chuyen trang
+Mau: Emerald #059669
+
+CACH CHAY:
+1. Cai Node.js LTS.
+2. Giai nen thu muc 6651071093_LAB2.
+3. Mo terminal tai thu muc nay.
+4. Chay: npm install
+5. Chay: npm run dev
+
+KIEM TRA:
+npx tsc --noEmit
+npx eslint .
+npm run test
+npm run build
+
+Luu y: Ban can tu tao GitHub repo, commit qua trinh, deploy va chup anh kiem tra that.
+
+Danh sách hiện có 40 hồ sơ thú cưng mẫu, mỗi hồ sơ có một ảnh riêng và phí hỗ trợ từ 300.000 đến 3.000.000 đồng. Dữ liệu dùng minh họa cho bài thực hành.
+
+
+CHUC NANG MOI: DANG KY NHAN NUOI
+1. Mo trang chu va chon mot thu cung.
+2. Bam nut 'Dang ky nhan nuoi [ten thu cung]' tren trang chi tiet.
+3. Dien ho ten, so dien thoai, email, dia chi va ly do muon nhan nuoi.
+4. Bam 'Gui dang ky'. Form se kiem tra du lieu va hien thong bao thanh cong.
+5. Du lieu demo duoc luu trong localStorage voi khoa mai-am-nho-adoption-applications.
+Luu y: Day la chuc nang demo phia trinh duyet, chua gui don den trung tam cuu ho vi du an chua co backend.
