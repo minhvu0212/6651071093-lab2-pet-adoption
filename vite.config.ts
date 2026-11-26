@@ -1,9 +1,7 @@
-import { defineConfig } from 'vitest/config'
+import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
   plugins: [react()],
-  test: {
-    environment: 'jsdom',
-  },
+  base: '/6651071093-lab2-nhan-nuoi-thu-cung/',
 })
